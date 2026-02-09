@@ -103,12 +103,18 @@ export function useChatState() {
 
   const handleConversationDelete = (id: string) => {
     const title = conversations.find((conv) => conv.id == id);
-    console.log(title)
     if (window.confirm("Are you sure you want to delete " + (title?.title ?? "this chat"))) {
       const filteredConversations = conversations.filter(
         (conv) => conv.id != id,
       );
       setConversations(filteredConversations);
+
+      // Update activeConversationId if the deleted conversation was active
+      if (activeConversationId === id) {
+        setActiveConversationId(
+          filteredConversations.length > 0 ? filteredConversations[0].id : null,
+        );
+      }
     }
   };
 
