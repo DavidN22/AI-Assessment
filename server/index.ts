@@ -12,7 +12,7 @@ try {
   if (!apiKey || apiKey === "your-api-key-here") {
     throw new Error("OPENAI_API_KEY environment variable is not set");
   }
-  // This isent needed but safe incase the libaray doesent read the env directly from the env
+  // This isent needed but safe incase the libaray doesent read the env directly from the env folder
   client = new OpenAI({
     apiKey: apiKey,
   });
