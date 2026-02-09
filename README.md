@@ -12,7 +12,17 @@ A full-stack application with a React frontend and Express backend integrated wi
 
 ### Recommended Installation Flow
 
-After cloning the repository, follow these steps:
+Clone the repository:
+```bash
+git clone https://github.com/DavidN22/AI-Assessment.git
+```
+
+Navigate into the project directory:
+```bash
+cd AI-Assessment
+```
+
+Then follow these steps:
 
 1. **Install root dependencies:**
    ```bash
@@ -30,6 +40,10 @@ After cloning the repository, follow these steps:
    ```bash
    cd client
    npm install
+   ```
+
+4. **Navigate back to the root directory:**
+   ```bash
    cd ..
    ```
 
